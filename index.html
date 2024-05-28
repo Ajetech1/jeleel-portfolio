@@ -16,14 +16,14 @@
         <nav>
           <img src="assets/img/mylogo.png" class="logo" />
           <ul id="sidemenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closeMenu()"></i>
           </ul>
-          <i class="fas fa-bars" onclick="openmenu()"></i>
+          <i class="fas fa-bars" onclick="openMenu()"></i>
         </nav>
         <div class="header-text">
           <p>Front-End Web Developer</p>
@@ -253,21 +253,6 @@
       </div>
     </div>
 
-    <!-- <script src="main.js"></script> -->
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

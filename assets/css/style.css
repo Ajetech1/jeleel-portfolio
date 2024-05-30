@@ -106,6 +106,21 @@ nav ul li a:hover::after {
 .about-col-2 {
   flex-basis: 60%;
 }
+.about-col-2 p {
+  text-align: justify;
+}
+.about-col-2 ul {
+  margin-top: 10px;
+  list-style: none;
+}
+
+.about-col-2 ul li i {
+  margin-right: 10px;
+}
+
+.about-col-2 ul li {
+  margin-left: 40px;
+}
 
 .sub-title {
   font-size: 60px;
@@ -432,7 +447,15 @@ nav .fas {
     font-size: 14px;
     margin-right: 20px;
   }
+  /* Adjusting p size here */
+  .about-col-2 p {
+    text-align: justify;
+    font-size: 13px;
+  }
 
+  .about-col-2 ul {
+    font-size: 13px;
+  }
   .tab-links {
     font-size: 16px;
   }

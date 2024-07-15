@@ -44,3 +44,55 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+// Additional of project list start here
+
+const moreProjects = [
+  {
+    title: "Digiplus Connect",
+    description:
+      "Digiplus Connect is a digital transformation company that offers various services.<br/><br/> Tools used: HTML, CSS, Sass, Bootstrap",
+    imgSrc: "assets/img/project2.png",
+    link: "https://project5-link.com",
+  },
+  {
+    title: "Hotel Viatours",
+    description:
+      "Hotel Viatours is located in Nigeria, Lagos. It is close to the most important monuments of Ogudu city.<br/><br/>Tools used: HTML, CSS, Sass, Bootstrap",
+    imgSrc: "assets/img/project3.png",
+    link: "https://viatours-services-page.vercel.app/",
+  },
+];
+
+let isExpanded = false;
+
+document.getElementById("see-more").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default anchor click behavior
+  const projectList = document.getElementById("project-list");
+
+  if (!isExpanded) {
+    moreProjects.forEach((project) => {
+      const projectDiv = document.createElement("div");
+      projectDiv.className = "project";
+      projectDiv.innerHTML = `
+          <img src="${project.imgSrc}" alt="project" />
+          <div class="layer">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <a href="${project.link}"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        `;
+      projectList.appendChild(projectDiv);
+    });
+    this.textContent = "See less"; // Change button text
+  } else {
+    // Remove added projects (optional: adjust as needed)
+    const projectsToRemove = projectList.querySelectorAll(
+      ".project:nth-child(n+4)"
+    );
+    projectsToRemove.forEach((project) => project.remove());
+    this.textContent = "See more"; // Change button text back
+  }
+
+  isExpanded = !isExpanded; // Toggle the state
+});

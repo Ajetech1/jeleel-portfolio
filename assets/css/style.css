@@ -342,6 +342,14 @@ nav ul li a:hover::after {
   transform: translateY(-5px);
 }
 
+.fa-custom {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/peiges.png");
+  background-size: cover;
+}
+
 .btn.btn2 {
   display: inline-block;
   background: #ff004f;
